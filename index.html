@@ -1,0 +1,168 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FlavorJourney — Food Blog</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar" role="banner">
+    <div class="nav-left">
+      <div class="logo">🍽️ <span class="brand">FlavorJourney</span></div>
+    </div>
+
+    <div class="nav-center">
+      <input id="searchInput" class="search" type="search" placeholder="Search recipes..." aria-label="Search recipes">
+    </div>
+
+    <div class="nav-right">
+      <div class="filters" role="toolbar" aria-label="Category filters">
+        <button class="filter-btn active" data-cat="all">All</button>
+        <button class="filter-btn" data-cat="Breakfast">Breakfast</button>
+        <button class="filter-btn" data-cat="Lunch">Lunch</button>
+        <button class="filter-btn" data-cat="Dinner">Dinner</button>
+        <button class="filter-btn" data-cat="Desserts">Desserts</button>
+      </div>
+
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home" aria-label="Hero">
+    <div class="hero-inner">
+      <h1>FlavorJourney</h1>
+      <p class="tag">Warm flavors • Simple techniques • Joyful cooking</p>
+    </div>
+  </section>
+
+  <!-- RECIPES GRID -->
+  <main class="main" id="main">
+    <section class="section">
+      <h2 class="section-title">Featured Recipes</h2>
+
+      <div id="grid" class="grid" aria-live="polite">
+        <!-- Card 1 -->
+        <article class="card" data-cat="Breakfast"
+          data-title="Fluffy Buttermilk Pancakes"
+          data-img="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?q=80&w=1600&auto=format&fit=crop"
+          data-ingredients="1¾ cups flour||2 tbsp sugar||2 tsp baking powder||1 tsp baking soda||1/2 tsp salt||1¾ cups buttermilk||2 large eggs||2 tbsp melted butter"
+          data-instructions="Whisk dry ingredients. Whisk wet ingredients. Combine with light folding. Heat pan, cook 2–3 mins per side. Serve with butter & maple syrup.">
+          <div class="thumb"><img loading="lazy" src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?q=80&w=1200&auto=format&fit=crop" alt="Buttermilk pancakes"></div>
+          <div class="card-body">
+            <h3>Fluffy Buttermilk Pancakes</h3>
+            <p>Classic breakfast pancakes — airy, tender, and perfect with maple syrup.</p>
+            <div class="card-actions">
+              <button class="view-btn">View Recipe</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="card" data-cat="Lunch"
+          data-title="Mediterranean Grain Bowl"
+          data-img="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1600&auto=format&fit=crop"
+          data-ingredients="Cooked farro||Cherry tomatoes||Cucumber||Olives||Feta||Lemon juice||Olive oil||Salt & pepper"
+          data-instructions="Combine grains and chopped veggies. Toss with lemon & olive oil. Top with feta and olives. Serve chilled or room temp.">
+          <div class="thumb"><img loading="lazy" src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1200&auto=format&fit=crop" alt="Grain bowl"></div>
+          <div class="card-body">
+            <h3>Mediterranean Grain Bowl</h3>
+            <p>Bright, filling lunch bowl with grains, veggies, and a lemony dressing.</p>
+            <div class="card-actions">
+              <button class="view-btn">View Recipe</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="card" data-cat="Dinner"
+          data-title="Spaghetti Bolognese"
+          data-img="https://images.unsplash.com/photo-1603133872878-684fba5c56fa?q=80&w=1600&auto=format&fit=crop"
+          data-ingredients="Spaghetti||Olive oil||Onion||Garlic||Minced beef||Crushed tomatoes||Salt & pepper||Basil"
+          data-instructions="Sauté onion & garlic. Brown beef. Add tomatoes & simmer 20–30 mins. Cook spaghetti. Combine and serve with basil.">
+          <div class="thumb"><img loading="lazy" src="https://images.unsplash.com/photo-1603133872878-684fba5c56fa?q=80&w=1200&auto=format&fit=crop" alt="Spaghetti bolognese"></div>
+          <div class="card-body">
+            <h3>Spaghetti Bolognese</h3>
+            <p>Hearty Italian classic with a rich, slow-simmered meat sauce.</p>
+            <div class="card-actions">
+              <button class="view-btn">View Recipe</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="card" data-cat="Desserts"
+          data-title="Molten Chocolate Cake"
+          data-img="https://images.unsplash.com/photo-1605478513128-17c17e2c5561?q=80&w=1600&auto=format&fit=crop"
+          data-ingredients="Dark chocolate||Butter||Sugar||Eggs||Flour||Vanilla"
+          data-instructions="Melt chocolate & butter. Whisk eggs & sugar. Combine and fold in flour. Bake 10–12 mins until edges set and center gooey.">
+          <div class="thumb"><img loading="lazy" src="https://images.unsplash.com/photo-1605478513128-17c17e2c5561?q=80&w=1200&auto=format&fit=crop" alt="Chocolate cake"></div>
+          <div class="card-body">
+            <h3>Molten Chocolate Cake</h3>
+            <p>Decadent single-serving cake with a liquid chocolate center.</p>
+            <div class="card-actions">
+              <button class="view-btn">View Recipe</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="card" data-cat="Breakfast"
+          data-title="Avocado Toast with Poached Egg"
+          data-img="https://images.unsplash.com/photo-1525351484163-7529414344d8?q=80&w=1600&auto=format&fit=crop"
+          data-ingredients="Sourdough||Avocado||Eggs||Lemon||Chili flakes||Salt"
+          data-instructions="Toast bread. Mash avocado with lemon & salt. Poach egg. Assemble and top with chili flakes.">
+          <div class="thumb"><img loading="lazy" src="https://images.unsplash.com/photo-1525351484163-7529414344d8?q=80&w=1200&auto=format&fit=crop" alt="Avocado toast"></div>
+          <div class="card-body">
+            <h3>Avocado Toast with Poached Egg</h3>
+            <p>A healthy and satisfying breakfast with creamy avocado and runny yolk.</p>
+            <div class="card-actions">
+              <button class="view-btn">View Recipe</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="card" data-cat="Dinner"
+          data-title="Grilled Herb Steak"
+          data-img="https://images.unsplash.com/photo-1543353071-087092ec393a?q=80&w=1600&auto=format&fit=crop"
+          data-ingredients="Steak||Garlic||Butter||Rosemary||Salt & pepper"
+          data-instructions="Season steak. Sear on high heat 3–4 mins per side. Rest with herbed butter. Slice and serve.">
+          <div class="thumb"><img loading="lazy" src="https://images.unsplash.com/photo-1543353071-087092ec393a?q=80&w=1200&auto=format&fit=crop" alt="Steak"></div>
+          <div class="card-body">
+            <h3>Grilled Herb Steak</h3>
+            <p>Juicy steak finished with garlic-herb butter for rich flavor.</p>
+            <div class="card-actions">
+              <button class="view-btn">View Recipe</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- MODAL -->
+  <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-panel" role="document">
+      <button class="modal-close" aria-label="Close recipe">✕</button>
+      <img id="modalImage" class="modal-image" src="" alt="">
+      <h2 id="modalTitle"></h2>
+      <div class="modal-meta">
+        <div class="modal-section">
+          <h3>Ingredients</h3>
+          <ul id="modalIngredients"></ul>
+        </div>
+        <div class="modal-section">
+          <h3>Instructions</h3>
+          <ol id="modalInstructions"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
